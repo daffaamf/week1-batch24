@@ -18,14 +18,20 @@ public class App {
                 12, // 11
         };
 
-        int[] nilaiHasilCopy = new int [5];
+        for (int i = 0; i < nilai.length; i++) {
+            System.out.println(("Nilai ke" + (i + 1) + "adalah = " + nilai[i]));
+        }
 
-        nilaiHasilCopy[0] = nilai[0];
-        
-        System.out.println(nilai[3]);
-        System.out.println(nilai[11]);
-        System.out.println(nilai);
-        System.out.println(nilai[nilai.length - 1]);
-        System.out.println(nilaiHasilCopy[4]);
+        String[] daftarBelanja = {
+            "Pepsovent",
+            "Lafebuoy",
+            "Lada bubuk",
+            "Bawang putih",
+            "Reenzo",
+        };
+
+        for (String barang : daftarBelanja){
+            System.out.println(barang);
+        }
     }
 }
