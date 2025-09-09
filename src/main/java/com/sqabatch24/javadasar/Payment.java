@@ -3,11 +3,11 @@ package com.sqabatch24.javadasar;
 public class Payment {
   private int grandTotal;
   private Cart[] carts;
+  private Discount discount;
 
   public Payment(Cart[] carts) {
     this.carts = carts;
-    grandTotal = 0;
-
+    this.grandTotal = 0;
     calculate();
   }
 
@@ -15,18 +15,33 @@ public class Payment {
     for (Cart cart : carts) {
       grandTotal += cart.getSubtotal();
     }
+
+  }
+  public void setDiscount(Discount discount) {
+      this.discount = discount;
   }
 
   public int getGrandTotal() {
     return grandTotal;
   }
 
+  public void calculateDiscount(){
+    int discountPrice = grandTotal * discount.getDiskon() / 100;
+    System.out.println("Discount price: Rp." + discountPrice );
+  }
+
+  private void calculateDiscountPrice(){
+    int discountPrice = grandTotal * discount.getDiskon() / 100;
+    int afterDiscount = grandTotal - discountPrice;
+    System.out.println("Grand total: Rp." + afterDiscount );
+  }
+
   public void summary() {
     for (Cart cart : carts) {
       System.out.println(cart.getProduct().getName());
-      System.out.println("Harga: " + cart.getProduct().getPrice());
-      System.out.println("Quantity: " + cart.getQuantity());
-      System.out.println("Subtotal: " + cart.getSubtotal());
+      System.out.println("Price: Rp." + cart.getProduct().getPrice() );
+      System.out.println("Quantity: " + cart.getQuantity() + "  Pcs");
+      System.out.println("Total: Rp." + cart.getSubtotal() + "\n");
     }
 
     // pertotal - diskon 30/50/70
@@ -34,10 +49,11 @@ public class Payment {
     // System.out.println("Diskon: " + diskonDisini);
 
     // System.out.println("Harga diskon: " + grandTotal * (diskon/100));
-    System.out.println("Harga before discount: " + grandTotal);
-    System.out.println("Diskon: " + "sample 50%");
-    System.out.println("Harga diskon: " + "masukinb harga diskon");
-    System.out.println("Harga after discount: " + "masukin after diskon");
+    System.out.println("Subtotal: Rp." + grandTotal);
+    System.out.println("Discount: Rp." + discount.getDiskon() + "%");
+
+    calculateDiscount();
+    calculateDiscountPrice();
   }
 
   // method buat dapetin harga diskon (diskon yang udeh berbentuk harga)
