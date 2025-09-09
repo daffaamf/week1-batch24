@@ -44,22 +44,10 @@ public class Payment {
       System.out.println("Total: Rp." + cart.getSubtotal() + "\n");
     }
 
-    // pertotal - diskon 30/50/70
-
-    // System.out.println("Diskon: " + diskonDisini);
-
-    // System.out.println("Harga diskon: " + grandTotal * (diskon/100));
     System.out.println("Subtotal: Rp." + grandTotal);
     System.out.println("Discount: Rp." + discount.getDiskon() + "%");
-
     calculateDiscount();
     calculateDiscountPrice();
   }
-
-  // method buat dapetin harga diskon (diskon yang udeh berbentuk harga)
-  // hargaDiskon = grandTotal * (diskon / 100)
-
-  // method buat dapeting total harga yang udeh di potong harga diskon
-  // grandTotal - hargaDiskon
 
 }
