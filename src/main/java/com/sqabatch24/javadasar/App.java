@@ -7,7 +7,7 @@ public class App {
         produk01.setId("P001");
         produk01.setName("Produk 1");
         produk01.setPrice(25_000);
-        
+
         Product produk02 = new Product();
         produk02.setId("P002");
         produk02.setName("Produk 2");
