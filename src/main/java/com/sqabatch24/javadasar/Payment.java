@@ -24,7 +24,7 @@ public class Payment {
   public int getGrandTotal() {
     return grandTotal;
   }
-  
+
   public void calculateDiscount(){
     int discountPrice = grandTotal * discount.getDiskon() / 100;
     System.out.println("Discount price: Rp." + discountPrice );

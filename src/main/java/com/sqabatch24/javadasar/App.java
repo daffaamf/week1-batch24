@@ -6,13 +6,13 @@ public class App {
         Product produk01 = new Product();
         produk01.setId("P001");
         produk01.setName("Produk 1");
-        produk01.setPrice(25_000);
-
+        produk01.setPrice(25_000); 
+        
         Product produk02 = new Product();
         produk02.setId("P002");
         produk02.setName("Produk 2");
         produk02.setPrice(10_500);
-        
+
         Product produk03 = new Product();
         produk03.setId("P003");
         produk03.setName("Produk 3");
