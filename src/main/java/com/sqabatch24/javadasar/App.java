@@ -12,7 +12,7 @@ public class App {
         produk02.setId("P002");
         produk02.setName("Produk 2");
         produk02.setPrice(10_500);
-
+        
         Product produk03 = new Product();
         produk03.setId("P003");
         produk03.setName("Produk 3");
